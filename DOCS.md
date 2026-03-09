@@ -1,11 +1,11 @@
 ## Table of Contents
 
-1. [Overview](#doc-docs-readme) (`docs/README.md`)
-2. [Basic Usage](#doc-docs-basic-usage) (`docs/basic-usage.md`)
-3. [Examples](#doc-docs-examples) (`docs/examples.md`)
-4. [Floor Meters](#doc-docs-floor-meters) (`docs/floor-meters.md`)
-5. [Loading Meters](#doc-docs-loading-meters) (`docs/loading-meters.md`)
-6. [Validation](#doc-docs-validation) (`docs/validation.md`)
+1. [Overview](#doc-docs-readme)
+2. [Basic Usage](#doc-docs-basic-usage)
+3. [Examples](#doc-docs-examples)
+4. [Floor Meters](#doc-docs-floor-meters)
+5. [Loading Meters](#doc-docs-loading-meters)
+6. [Validation](#doc-docs-validation)
 <a id="doc-docs-readme"></a>
 
 Volume and dimensional calculation utilities for PHP 8.4+ with chainable unit conversions and logistics calculations.

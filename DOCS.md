@@ -1,11 +1,13 @@
 ## Table of Contents
 
-1. Overview (`docs/README.md`)
-2. Basic Usage (`docs/basic-usage.md`)
-3. Examples (`docs/examples.md`)
-4. Floor Meters (`docs/floor-meters.md`)
-5. Loading Meters (`docs/loading-meters.md`)
-6. Validation (`docs/validation.md`)
+1. [Overview](#doc-docs-readme) (`docs/README.md`)
+2. [Basic Usage](#doc-docs-basic-usage) (`docs/basic-usage.md`)
+3. [Examples](#doc-docs-examples) (`docs/examples.md`)
+4. [Floor Meters](#doc-docs-floor-meters) (`docs/floor-meters.md`)
+5. [Loading Meters](#doc-docs-loading-meters) (`docs/loading-meters.md`)
+6. [Validation](#doc-docs-validation) (`docs/validation.md`)
+<a id="doc-docs-readme"></a>
+
 Volume and dimensional calculation utilities for PHP 8.4+ with chainable unit conversions and logistics calculations.
 
 ## Requirements
@@ -84,11 +86,13 @@ $cm3->height;  // 100.0
 
 ## Features
 
-- **[Basic Usage](./basic-usage.md)** - Creating volumes and unit conversions
-- **[Loading Meters](./loading-meters.md)** - Freight logistics calculations
-- **[Floor Meters](./floor-meters.md)** - Floor area calculations
-- **[Examples](./examples.md)** - Real-world usage patterns
-- **[Validation](./validation.md)** - Input validation rules
+- **[Basic Usage](#doc-docs-basic-usage)** - Creating volumes and unit conversions
+- **[Loading Meters](#doc-docs-loading-meters)** - Freight logistics calculations
+- **[Floor Meters](#doc-docs-floor-meters)** - Floor area calculations
+- **[Examples](#doc-docs-examples)** - Real-world usage patterns
+- **[Validation](#doc-docs-validation)** - Input validation rules
+
+<a id="doc-docs-basic-usage"></a>
 
 The `volume()` function creates a `Volume` instance that provides chainable unit conversion methods.
 
@@ -184,6 +188,8 @@ $centimeters = $vol->centimeters(); // New CubicCentimeter instance
 
 // Original volume is unchanged
 ```
+
+<a id="doc-docs-examples"></a>
 
 Practical examples demonstrating real-world usage of the volume library.
 
@@ -435,6 +441,8 @@ echo "By volume: " . $packer->estimateFit($boxDimensions) . " boxes\n";
 echo "By LDM: " . $packer->estimateByLoadingMeters($boxDimensions) . " boxes\n";
 ```
 
+<a id="doc-docs-floor-meters"></a>
+
 Floor meters calculate the footprint area (length × width) of cargo in square meters, providing the ground space required for storage or stacking.
 
 ## Basic Calculation
@@ -554,6 +562,8 @@ public static function fromCentimeters(float $length, float $width): FloorMeter
 | `$length` | `float` | Length dimension in meters |
 | `$width` | `float` | Width dimension in meters |
 | `$value` | `float` | Calculated area in m² |
+
+<a id="doc-docs-loading-meters"></a>
 
 Loading meters (LDM) is a standard calculation in cargo transportation that determines how much space shipments occupy lengthwise in a truck.
 
@@ -686,6 +696,8 @@ public static function fromMeters(
 | `value()` | `float` | Raw loading meter value |
 | `format(int $decimals = 2)` | `string` | Formatted with number_format |
 | `__toString()` | `string` | String representation |
+
+<a id="doc-docs-validation"></a>
 
 The library enforces strict validation to ensure all volume calculations are based on valid dimensional data.
 
